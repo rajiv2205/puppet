@@ -7,7 +7,12 @@ class wordpresswithmodules::conf {
     $db_user = 'wpuser'
     $db_user_password = 'password'
     $db_host = 'localhost'
+    $db_backup_user = 'backup-user'
 
+    $db_backup_path = '/root/backup'
+    $wordpress_URL = 'https://wordpress.org'
+    $wordpress_install_dir = '/var/www/html'
+    $wordpress_version = '4.3.1'
     # Don't change the following variables
 
     # This will evaluate to wp@localhost

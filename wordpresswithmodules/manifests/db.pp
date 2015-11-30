@@ -40,9 +40,9 @@ class wordpresswithmodules::db {
     }
 
 	class { '::mysql::server::backup':
-		backupuser => "${wordpresswithmodules::conf::db_user}",
+		backupuser => "${wordpresswithmodules::conf::db_backup_user}",
 		backuppassword => "${wordpresswithmodules::conf::db_user_password}",
-		backupdir => /root/backup/,
+		backupdir => "${wordpresswithmodules::conf::db_backup_path}",
 		backupcompress => true,
 		ensure => 'present',
 		backupdatabases => ["${wordpresswithmodules::conf::db_name}"],
